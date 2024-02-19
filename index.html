@@ -23,6 +23,14 @@
             border-radius: 100%; /* Makes the image round */
             margin: 20px 0;
         }
+		/* Adjusted Divider Styles */
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: black;
+            width: 50%; /* Shorter width */
+            margin: 40px auto;
+        }
         .social-links {
             margin: 20px 0;
         }
@@ -67,6 +75,43 @@
             font-size: 20px; /* Custom size for welcome text */
             margin: 10px 0 20px; /* Adjust spacing around welcome text */
         }
+        /* Form Styles */
+        #fs-frm {
+            max-width: 400px;
+            width: 100%;
+            border: none; /* Ensure no border is around the form */
+            padding: 0;
+            margin-top: 20px;
+        }
+        #fs-frm input, #fs-frm textarea {
+            color: #333;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 8px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        #fs-frm label {
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+        #fs-frm fieldset {
+            border: none; /* Remove any default fieldset border */
+        }
+        #fs-frm [type='submit'] {
+            background-color: #90EE90;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        #fs-frm [type='submit']:hover {
+            background-color: #32CD32;
+        }
     </style>
 </head>
 <body>
@@ -85,5 +130,23 @@
         <a href="https://twitter.com/drcharmaine" target="_blank"><img src="x_logo.png" alt="Twitter Icon">@drcharmaine</a>
         <a href="https://www.linkedin.com/in/charmaine-soco-7b527220b" target="_blank"><img src="linkedin_logo.png" alt="LinkedIn Icon">charmaine-soco-7b527220b</a>
     </div>
+
+    <hr>
+
+    <p>Happy to connect. Please leave a message.</p>
+
+    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mvoeallk" method="post">
+        <fieldset>
+            <label for="full-name">Name</label>
+            <input type="text" name="name" id="full-name" placeholder="" required>
+            <label for="email-address">Email Address</label>
+            <input type="email" name="_replyto" id="email-address" placeholder="" required>
+            <label for="message">Message</label>
+            <textarea rows="5" name="message" id="message" placeholder="" required></textarea>
+            <input type="hidden" name="_subject" value="Contact Form Submission">
+        </fieldset>
+        <input type="submit" value="Submit">
+    </form>
+
 </body>
 </html>
